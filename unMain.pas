@@ -1,4 +1,4 @@
-unit unMain;
+п»їunit unMain;
 
 interface
 
@@ -296,7 +296,7 @@ begin
     HTMLFile.Text:= fmMain.IdHTTP1.Post(address,Params);
     with HTMLFile do
       for i:= 0 to Count do
-        if (Strings[i]='<h2>Скачать файл можно по этой ссылке:</h2>') then begin
+        if (Strings[i]='<h2>РЎРєР°С‡Р°С‚СЊ С„Р°Р№Р» РјРѕР¶РЅРѕ РїРѕ СЌС‚РѕР№ СЃСЃС‹Р»РєРµ:</h2>') then begin
           SongsLinks.Add(GetHref('href',Strings[i+1]));
           Break;
     end;
@@ -430,7 +430,7 @@ begin
   end;
 
   ShowMessage('HOW TO WORK WITH THIS PROGRAM:'+#13#10+
-    '1. Сopy the link to the artist page in the input field below'+#13#10+
+    '1. Copy the link to the artist page in the input field below'+#13#10+
     '2. Press "Get Albums List"'+#13#10+
     '3. Select desired albums and press "Get Songs List"'+#13#10+
     '4. Select desired songs and press "Start Downloading"'+#13#10+
@@ -461,7 +461,7 @@ begin
     p:= pos('"',s);
     Delete(s,p,Length(s)-p+1);
   end;
-  Result:= s;    
+  Result:= s;
 end;
 
 procedure Sort(var sl: TStrings);
